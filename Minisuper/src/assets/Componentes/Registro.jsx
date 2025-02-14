@@ -11,11 +11,11 @@ const Registro = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/api/productos", producto);
-      alert("Producto registrado exitosamente!");
+      await axios.post("http://localhost:5000/api/productos", producto);
+      alert("✅ Producto registrado con éxito!");
       setProducto({ nombre_Producto: "", Distribuidor: "" }); // Limpiar el formulario
     } catch (error) {
-      console.error("Error al registrar el producto", error);
+      console.error("❌ Error al registrar el producto:", error);
     }
   };
 
@@ -46,4 +46,3 @@ const Registro = () => {
 };
 
 export default Registro;
-
