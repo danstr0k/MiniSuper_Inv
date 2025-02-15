@@ -17,8 +17,6 @@ const Inicio = () => {
       {/* Botones */}
       <div className="botones">
         <a href="/Registro" className="boton">Registro</a>
-        <a href="/vender-producto" className="boton">VENDER PRODUCTO</a>
-        <a href="/generar-reporte" className="boton">GENERAR REPORTE</a>
       </div>
     </div>
   );
