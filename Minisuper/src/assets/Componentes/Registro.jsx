@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const Registro = () => {
-  const [producto, setProducto] = useState({ nombre_Producto: "", Distribuidor: "" });
+  const [producto, setProducto] = useState({ 
+    nombre_Producto: "", 
+    Distribuidor: "", 
+    Descripcion: ""  // Nuevo campo agregado
+  });
 
   const handleChange = (e) => {
     setProducto({ ...producto, [e.target.name]: e.target.value });
@@ -13,7 +17,7 @@ const Registro = () => {
     try {
       await axios.post("http://localhost:5000/api/productos", producto);
       alert("✅ Producto registrado con éxito!");
-      setProducto({ nombre_Producto: "", Distribuidor: "" }); // Limpiar el formulario
+      setProducto({ nombre_Producto: "", Distribuidor: "", Descripcion: "" }); // Limpiar el formulario
     } catch (error) {
       console.error("❌ Error al registrar el producto:", error);
     }
@@ -36,6 +40,13 @@ const Registro = () => {
           name="Distribuidor"
           placeholder="Distribuidor"
           value={producto.Distribuidor}
+          onChange={handleChange}
+          required
+        />
+        <textarea
+          name="Descripcion"
+          placeholder="Descripción del producto"
+          value={producto.Descripcion}
           onChange={handleChange}
           required
         />
