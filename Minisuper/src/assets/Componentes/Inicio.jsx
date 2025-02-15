@@ -1,12 +1,24 @@
 import React from 'react';
+import './Inicio.css'; // Importa el archivo CSS
+import logo from './Recursos/LOGUITO.png'; // Asegúrate de que la ruta sea correcta
+
 
 const Inicio = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
-      <h1 className="text-4xl font-bold mb-6">Bienvenido a Jumanji</h1>
-      <div className="space-x-4">
-        <a href="/crear" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Inicio</a>
-        <a href="/registro" className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Registro</a>
+    <div className="contenedor">
+      {/* Logo */}
+      <img src={logo} alt="Logo Mini Super" className="logo" />
+
+      {/* Título */}
+      <h1 className="titulo">
+        <span>MINI</span> <span className="negrita">SUPER</span>
+      </h1>
+
+      {/* Botones */}
+      <div className="botones">
+        <a href="/Registro" className="boton">Registro</a>
+        <a href="/vender-producto" className="boton">VENDER PRODUCTO</a>
+        <a href="/generar-reporte" className="boton">GENERAR REPORTE</a>
       </div>
     </div>
   );

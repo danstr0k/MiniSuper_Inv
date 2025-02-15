@@ -1,0 +1,61 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Logo */
+.logo {
+    width: 120px; /* Tamaño más controlado */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Título */
+.titulo {
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.negrita {
+    font-weight: 900;
+}
+
+/* Botones */
+.botones {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.boton {
+    background-color: #4A90E2;
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+    border: 2px solid #2C6FB0;
+}
+
+.boton:hover {
+    background-color: #357ABD;
+}
